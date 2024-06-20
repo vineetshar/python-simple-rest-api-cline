@@ -38,10 +38,10 @@ def index(_):
     }
     
 
-@api.get("/hello")
+@api.get("/helloworld")
 def list(_):
     return {
-        "hello":"world"
+       "hello":"world"
     }
     
 
