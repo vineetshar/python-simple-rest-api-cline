@@ -36,7 +36,14 @@ def index(_):
         "actions": [ "add", "delete", "list", "search" ],
         "version": "1.0.0"
     }
+    
 
+@api.get("/hello")
+def list(_):
+    return {
+        "hello":"world"
+    }
+    
 
 @api.get("/list")
 def list(_):
@@ -44,6 +51,7 @@ def list(_):
         "count": len(example_data["items"]),
         "items": example_data["items"]
     }
+
 
 @api.get("/search")
 def search(args):
